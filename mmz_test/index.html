@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> 
+<html>
+<head>
+<style type="text/css">
+ ul.hr li {
+ display: inline; /* Отображать как встроенный элемент */
+ margin-right: 5px; /* Отступ слева */
+ border: 1px solid #000; /* Рамка вокруг контента */
+ padding: 3px; /* Поля вокруг контента */
+}
+.tt {color: green; font-weight: bold;}
+.ff {color: red; font-weight: bold;}
+</style>
+</head>
+<body>
+ <table id="table">
+        <tr>
+            <th>id</th>
+            <th>country name</th>
+        </tr>
+        
+        <tr>
+            <td>{{ '1' }}</td>
+            <td>{{ '11' }}</td>
+        </tr>
+        <tr>
+            <td>{{ '2' }}</td>
+            <td>{{ '2' }}</td>
+        </tr>
+		
+
+<script>
+//это переменная списка
+var table = [ 
+["1","имя1"],
+["2","имя2"],
+["3","имя3"]
+];
+ 
+ //!!! список table запихать в элемент формы
+ 
+function take() {
+//!!определить какая позиция списка выбрана на форме
+//!! вызвать функцию запроса с параметром выбранной позиции
+
+//var varQuantity =(document.getElementsByName('table').length);
+//alert(varQuantity );
+
+alert(table[0][1] ); // пока тупо показывает название первого элемента
+
+}
+
+</script>
+
+<div id="qBlock"><h2>Тест</h2>
+</div>
+
+<div id='btn'>
+<input type="button" value="Выбрать!" onclick="take()" />
+</div>
+
+<br><br><br><br>
+</body>
+</html>

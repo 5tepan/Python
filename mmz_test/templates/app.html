@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Название документа</title>
+  </head>
+ 
+  <body>
+    <table id="table">
+        <tr>
+            <th>id</th>
+            <th>country name</th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>{{ item.id_country }}</td>
+            <td>{{ item.country_name }}</td>
+        </tr>
+        {% endfor %}
+        <form id="selId">
+          <select id="sell" name="aaaaaaaa">
+            <option name="val" selected>Выберите значение</option>
+            <option name="contA" selected>Страны А</option>
+            <option name="contB" selected>Страны Б</option>
+          </select>
+          <button id="gett" type="submit">отправить</button>
+        </form>
+       
+        <script>
+          const form = document.getElementById('sell')
+          form.addEventListener('submit', GetFormValue)
+          function GetFormValue(event) {
+            event.preventDefault();
+            const v = form.querySelector('name=aaaaaaaa')
+            const a = form.querySelector('name=aaaaaaaa')
+            const b = form.querySelector('name=aaaaaaaa')
+
+            const dataVal = {v: v.selected}
+            const dataA = {a: a.selected}
+            const dataB = {b: b.selected}
+
+
+            if (a.selected){
+              console.log('Привет мир!')
+            } else if (b.selected) {
+              console.log('Пока мир!')
+            } else {
+              console.log('Не получилось!')
+            }
+          }
+        </script>
+  
+  </body>
+</html>
